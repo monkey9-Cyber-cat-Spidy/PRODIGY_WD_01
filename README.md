@@ -44,11 +44,6 @@ For inquiries, reach out via [LinkedIn](https://www.linkedin.com/in/kvsmanikanta
 
 ---  
 🚀 Built by **KVS Manikanta** – Intern at **Prodigy Infotech**  
-lder:  
-   ```bash
-   cd prodigy-infotech-landing-page
-   ```  
-3. Open `index.html` in your browser or deploy it using **Vercel / Netlify**.  
 
 ## 📧 Contact  
 For inquiries, reach out via [LinkedIn](https://www.linkedin.com/in/kvsmanikanta).  
