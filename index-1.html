@@ -1,0 +1,1423 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Prodigy Infotech - Transforming Education Through Innovation</title>
+    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<style>
+
+/* Base Styles */
+:root {
+    --primary-color: #4361ee;
+    --secondary-color: #3a0ca3;>
+    --accent-color: #4cc9f0;
+    --light-color: #f8f9fa;
+    --dark-color: #212529;
+    --gray-color: #6c757d;
+    --success-color: #4caf50;
+    --warning-color: #ff9800;
+    --danger-color: #f44336;
+    --box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    --transition: all 0.3s ease;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    line-height: 1.6;
+    color: var(--dark-color);
+    background-color: #fff;
+}
+
+.container {
+    width: 90%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 15px;
+}
+
+section {
+    padding: 80px 0;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+}
+
+a {
+    text-decoration: none;
+    color: var(--dark-color);
+    transition: var(--transition);
+}
+
+ul {
+    list-style: none;
+}
+
+.btn-primary, .btn-secondary {
+    display: inline-block;
+    padding: 12px 30px;
+    border-radius: 50px;
+    font-weight: 500;
+    text-align: center;
+    cursor: pointer;
+    transition: var(--transition);
+    border: none;
+    font-size: 16px;
+}
+
+.btn-primary {
+    background-color: var(--primary-color);
+    color: white;
+}
+
+.btn-primary:hover {
+    background-color: var(--secondary-color);
+    transform: translateY(-3px);
+    box-shadow: var(--box-shadow);
+}
+
+.btn-secondary {
+    background-color: transparent;
+    border: 2px solid var(--primary-color);
+    color: var(--primary-color);
+}
+
+.btn-secondary:hover {
+    background-color: var(--primary-color);
+    color: white;
+    transform: translateY(-3px);
+    box-shadow: var(--box-shadow);
+}
+
+.section-header {
+    text-align: center;
+    margin-bottom: 50px;
+}
+
+.section-header h2 {
+    font-size: 36px;
+    margin-bottom: 15px;
+    color: var(--dark-color);
+}
+
+.underline {
+    height: 4px;
+    width: 70px;
+    background: var(--primary-color);
+    margin: 0 auto 20px;
+    border-radius: 2px;
+}
+
+.section-header p {
+    color: var(--gray-color);
+    max-width: 700px;
+    margin: 0 auto;
+}
+
+/* Header Styles */
+header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background-color: white;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    z-index: 1000;
+    padding: 15px 0;
+    transition: var(--transition);
+}
+
+header .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo h1 {
+    font-size: 28px;
+    font-weight: 700;
+    color: var(--dark-color);
+}
+
+.logo span {
+    color: var(--primary-color);
+}
+
+.nav-links {
+    display: flex;
+    align-items: center;
+}
+
+.nav-links li {
+    margin: 0 15px;
+}
+
+.nav-links a {
+    font-weight: 500;
+    position: relative;
+}
+
+.nav-links a:not(.btn-primary)::after {
+    content: '';
+    position: absolute;
+    bottom: -5px;
+    left: 0;
+    width: 0;
+    height: 2px;
+    background-color: var(--primary-color);
+    transition: var(--transition);
+}
+
+.nav-links a:not(.btn-primary):hover::after {
+    width: 100%;
+}
+
+.nav-links a:not(.btn-primary):hover {
+    color: var(--primary-color);
+}
+
+.hamburger {
+    display: none;
+    cursor: pointer;
+}
+
+.bar {
+    display: block;
+    width: 25px;
+    height: 3px;
+    margin: 5px auto;
+    background-color: var(--dark-color);
+    transition: var(--transition);
+}
+
+/* Hero Section */
+.hero {
+    padding-top: 150px;
+    padding-bottom: 80px;
+    background: linear-gradient(135deg, #f5f7fa 0%, #e4e7ec 100%);
+}
+
+.hero .container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.hero-content {
+    flex: 1;
+    padding-right: 30px;
+}
+
+.hero-content h1 {
+    font-size: 48px;
+    line-height: 1.2;
+    margin-bottom: 20px;
+    color: var(--dark-color);
+}
+
+.hero-content p {
+    font-size: 18px;
+    color: var(--gray-color);
+    margin-bottom: 30px;
+}
+
+.hero-buttons {
+    display: flex;
+    gap: 15px;
+}
+
+.hero-image {
+    flex: 1;
+    text-align: center;
+}
+
+/* About Section */
+.about-content {
+    display: flex;
+    align-items: center;
+    gap: 50px;
+}
+
+.about-image {
+    flex: 1;
+}
+
+.about-text {
+    flex: 1;
+}
+
+.about-text h3 {
+    font-size: 24px;
+    margin-bottom: 15px;
+    color: var(--dark-color);
+}
+
+.about-text p {
+    margin-bottom: 20px;
+    color: var(--gray-color);
+}
+
+.stats-container {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 40px;
+    text-align: center;
+}
+
+.stat-box {
+    flex: 1;
+    padding: 20px;
+    border-radius: 10px;
+    background-color: white;
+    box-shadow: var(--box-shadow);
+    transition: var(--transition);
+}
+
+.stat-box:hover {
+    transform: translateY(-10px);
+}
+
+.stat-box i {
+    font-size: 30px;
+    color: var(--primary-color);
+    margin-bottom: 15px;
+}
+
+.stat-box h4 {
+    font-size: 28px;
+    margin-bottom: 5px;
+    color: var(--dark-color);
+}
+
+.stat-box p {
+    color: var(--gray-color);
+    margin-bottom: 0;
+}
+
+/* Services Section */
+.services {
+    background-color: #f8f9fa;
+}
+
+.services-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 30px;
+}
+
+.service-card {
+    background-color: white;
+    border-radius: 10px;
+    padding: 30px;
+    text-align: center;
+    box-shadow: var(--box-shadow);
+    transition: var(--transition);
+}
+
+.service-card:hover {
+    transform: translateY(-10px);
+}
+
+.service-icon {
+    width: 70px;
+    height: 70px;
+    background-color: rgba(67, 97, 238, 0.1);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto 20px;
+}
+
+.service-icon i {
+    font-size: 30px;
+    color: var(--primary-color);
+}
+
+.service-card h3 {
+    font-size: 20px;
+    margin-bottom: 15px;
+    color: var(--dark-color);
+}
+
+.service-card p {
+    color: var(--gray-color);
+}
+
+/* Internships Section */
+.internship-tabs {
+    margin-top: 30px;
+}
+
+.tab-buttons {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 30px;
+    flex-wrap: wrap;
+}
+
+.tab-btn {
+    padding: 12px 25px;
+    background-color: transparent;
+    border: none;
+    border-bottom: 3px solid transparent;
+    font-size: 16px;
+    font-weight: 500;
+    cursor: pointer;
+    transition: var(--transition);
+    margin: 0 10px 10px;
+    color: var(--gray-color);
+}
+
+.tab-btn.active, .tab-btn:hover {
+    color: var(--primary-color);
+    border-bottom: 3px solid var(--primary-color);
+}
+
+.tab-pane {
+    display: none;
+}
+
+.tab-pane.active {
+    display: block;
+    animation: fadeIn 0.5s ease;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+.internship-content {
+    display: flex;
+    align-items: center;
+    gap: 30px;
+}
+
+.internship-image {
+    flex: 1;
+}
+
+.internship-details {
+    flex: 1;
+}
+
+.internship-details h3 {
+    font-size: 24px;
+    margin-bottom: 15px;
+    color: var(--dark-color);
+}
+
+.internship-details p {
+    margin-bottom: 20px;
+    color: var(--gray-color);
+}
+
+.internship-details ul {
+    margin-bottom: 25px;
+}
+
+.internship-details li {
+    margin-bottom: 10px;
+    color: var(--gray-color);
+}
+
+.internship-details li i {
+    color: var(--success-color);
+    margin-right: 10px;
+}
+
+/* Testimonials Section */
+.testimonials {
+    background-color: #f8f9fa;
+}
+
+.testimonial-slider {
+    position: relative;
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.testimonial-container {
+    position: relative;
+    overflow: hidden;
+    min-height: 300px;
+}
+
+.testimonial {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    opacity: 0;
+    visibility: hidden;
+    transition: var(--transition);
+    display: flex;
+    align-items: center;
+    background-color: white;
+    border-radius: 10px;
+    padding: 30px;
+    box-shadow: var(--box-shadow);
+}
+
+.testimonial.active {
+    opacity: 1;
+    visibility: visible;
+    position: relative;
+}
+
+.testimonial-img {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    overflow: hidden;
+    margin-right: 30px;
+    flex-shrink: 0;
+}
+
+.testimonial-content p {
+    font-style: italic;
+    margin-bottom: 15px;
+    color: var(--gray-color);
+}
+
+.testimonial-content h4 {
+    font-size: 18px;
+    margin-bottom: 5px;
+    color: var(--dark-color);
+}
+
+.position {
+    color: var(--gray-color);
+    font-size: 14px;
+    margin-bottom: 10px;
+}
+
+.rating {
+    color: #ffc107;
+}
+
+.testimonial-controls {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 30px;
+}
+
+.prev-btn, .next-btn {
+    background-color: var(--primary-color);
+    color: white;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: none;
+    cursor: pointer;
+    transition: var(--transition);
+}
+
+.prev-btn:hover, .next-btn:hover {
+    background-color: var(--secondary-color);
+}
+
+.testimonial-dots {
+    display: flex;
+    margin: 0 20px;
+}
+
+.dot {
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    background-color: #ddd;
+    margin: 0 5px;
+    cursor: pointer;
+    transition: var(--transition);
+}
+
+.dot.active {
+    background-color: var(--primary-color);
+}
+
+/* Contact Section */
+.contact-content {
+    display: flex;
+    gap: 50px;
+}
+
+.contact-info, .contact-form {
+    flex: 1;
+}
+
+.contact-item {
+    display: flex;
+    align-items: flex-start;
+    margin-bottom: 30px;
+}
+
+.contact-item i {
+    font-size: 24px;
+    color: var(--primary-color);
+    margin-right: 20px;
+    margin-top: 5px;
+}
+
+.contact-item h3 {
+    font-size: 18px;
+    margin-bottom: 5px;
+    color: var(--dark-color);
+}
+
+.contact-item p {
+    color: var(--gray-color);
+}
+
+.social-links {
+    display: flex;
+    margin-top: 30px;
+}
+
+.social-icon {
+    width: 40px;
+    height: 40px;
+    background-color: var(--primary-color);
+    color: white;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-right: 15px;
+    transition: var(--transition);
+}
+
+.social-icon:hover {
+    background-color: var(--secondary-color);
+    transform: translateY(-5px);
+}
+
+.form-group {
+    margin-bottom: 20px;
+}
+
+.form-group input, .form-group textarea {
+    width: 100%;
+    padding: 15px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    font-family: 'Poppins', sans-serif;
+    font-size: 16px;
+    transition: var(--transition);
+}
+
+.form-group input:focus, .form-group textarea:focus {
+    border-color: var(--primary-color);
+    outline: none;
+}
+
+.form-group textarea {
+    height: 150px;
+    resize: none;
+}
+
+/* Footer */
+footer {
+    background-color: #212529;
+    color: white;
+    padding: 70px 0 20px;
+}
+
+.footer-content {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 30px;
+    margin-bottom: 50px;
+}
+
+.footer-logo h2 {
+    font-size: 28px;
+    margin-bottom: 15px;
+}
+
+.footer-logo span {
+    color: var(--primary-color);
+}
+
+.footer-logo p {
+    color: #adb5bd;
+}
+
+.footer-links h3, .footer-internships h3, .footer-newsletter h3 {
+    font-size: 18px;
+    margin-bottom: 20px;
+    position: relative;
+    padding-bottom: 10px;
+}
+
+.footer-links h3::after, .footer-internships h3::after, .footer-newsletter h3::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 50px;
+    height: 2px;
+    background-color: var(--primary-color);
+}
+
+.footer-links ul li, .footer-internships ul li {
+    margin-bottom: 10px;
+}
+
+.footer-links a, .footer-internships a {
+    color: #adb5bd;
+    transition: var(--transition);
+}
+
+.footer-links a:hover, .footer-internships a:hover {
+    color: white;
+    padding-left: 5px;
+}
+
+.footer-newsletter p {
+    color: #adb5bd;
+    margin-bottom: 20px;
+}
+
+.footer-newsletter form {
+    display: flex;
+}
+
+.footer-newsletter input {
+    flex: 1;
+    padding: 12px 15px;
+    border: none;
+    border-radius: 5px 0 0 5px;
+    font-family: 'Poppins', sans-serif;
+}
+
+.footer-newsletter button {
+    border-radius: 0 5px 5px 0;
+    padding: 0 20px;
+}
+
+.footer-bottom {
+    text-align: center;
+    padding-top: 20px;
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.footer-bottom p {
+    color: #adb5bd;
+}
+
+/* Responsive Styles */
+@media (max-width: 992px) {
+    .hero .container, .about-content, .internship-content, .contact-content {
+        flex-direction: column;
+    }
+    
+    .hero-content, .about-text, .internship-details, .contact-info, .contact-form {
+        padding-right: 0;
+        margin-bottom: 40px;
+    }
+    
+    .hero-image, .about-image, .internship-image {
+        order: -1;
+        margin-bottom: 30px;
+    }
+    
+    .testimonial {
+        flex-direction: column;
+        text-align: center;
+    }
+    
+    .testimonial-img {
+        margin-right: 0;
+        margin-bottom: 20px;
+    }
+}
+
+@media (max-width: 768px) {
+    .nav-links {
+        position: fixed;
+        left: -100%;
+        top: 70px;
+        flex-direction: column;
+        background-color: white;
+        width: 100%;
+        text-align: center;
+        transition: var(--transition);
+        box-shadow: 0 10px 15px rgba(0, 0, 0, 0.1);
+        padding: 20px 0;
+    }
+    
+    .nav-links.active {
+        left: 0;
+    }
+    
+    .nav-links li {
+        margin: 15px 0;
+    }
+    
+    .hamburger {
+        display: block;
+    }
+    
+    .hamburger.active .bar:nth-child(2) {
+        opacity: 0;
+    }
+    
+    .hamburger.active .bar:nth-child(1) {
+        transform: translateY(8px) rotate(45deg);
+    }
+    
+    .hamburger.active .bar:nth-child(3) {
+        transform: translateY(-8px) rotate(-45deg);
+    }
+    
+    .hero-content h1 {
+        font-size: 36px;
+    }
+    
+    .stats-container {
+        flex-direction: column;
+        gap: 20px;
+    }
+    
+    .hero-buttons {
+        flex-direction: column;
+        gap: 15px;
+    }
+    
+    .hero-buttons a {
+        width: 100%;
+        text-align: center;
+    }
+    
+    .footer-newsletter form {
+        flex-direction: column;
+    }
+    
+    .footer-newsletter input {
+        border-radius: 5px;
+        margin-bottom: 10px;
+    }
+    
+    .footer-newsletter button {
+        border-radius: 5px;
+        width: 100%;
+    }
+}
+
+@media (max-width: 576px) {
+    .section-header h2 {
+        font-size: 28px;
+    }
+    
+    .tab-buttons {
+        flex-direction: column;
+        align-items: center;
+    }
+    
+    .tab-btn {
+        width: 100%;
+        text-align: center;
+    }
+}
+
+</style>
+</head>
+<body>
+    <!-- Header -->
+    <header>
+        <div class="container">
+            <div class="logo">
+                <h1>Prodigy<span>Infotech</span></h1>
+            </div>
+            <nav>
+                <ul class="nav-links">
+                    <li><a href="#home">Home</a></li>
+                    <li><a href="#about">About</a></li>
+                    <li><a href="#services">Services</a></li>
+                    <li><a href="#internships">Internships</a></li>
+                    <li><a href="#testimonials">Testimonials</a></li>
+                    <li><a href="#contact" class="btn-primary">Contact Us</a></li>
+                </ul>
+                <div class="hamburger">
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                </div>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section id="home" class="hero">
+        <div class="container">
+            <div class="hero-content">
+                <h1>Transform Your Learning Journey</h1>
+                <p>Empowering students and professionals through innovative digital solutions and real-world internships</p>
+                <div class="hero-buttons">
+                    <a href="#internships" class="btn-primary">Explore Internships</a>
+                    <a href="#services" class="btn-secondary">Our Services</a>
+                </div>
+            </div>
+            <div class="hero-image">
+                <img src="Students-learning.jpg" alt="Students learning online">
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="about">
+        <div class="container">
+            <div class="section-header">
+                <h2>About Prodigy Infotech</h2>
+                <div class="underline"></div>
+            </div>
+            <div class="about-content">
+                <div class="about-image">
+                    <img src="logo.svg" alt="Prodigy Infotech Office">
+                </div>
+                <div class="about-text">
+                    <h3>Our Story</h3>
+                    <p>Founded in 2023 and headquartered in Mumbai, Prodigy Infotech is a dynamic edtech startup dedicated to transforming the way people learn through innovative and accessible digital solutions.</p>
+<p class="note">Note: All the data including images or videos are not owned by the creator.</p>
+                    
+                    <h3>Our Mission</h3>
+                    <p>We empower students, professionals, and organizations by providing world-class e-learning experiences paired with real-world internships, helping them build practical skills that enhance their career prospects.</p>
+                    
+                    <div class="stats-container">
+                        <div class="stat-box">
+                            <i class="fas fa-users"></i>
+                            <h4>100,000+</h4>
+                            <p>LinkedIn Followers</p>
+                        </div>
+                        <div class="stat-box">
+                            <i class="fas fa-laptop-code"></i>
+                            <h4>10+</h4>
+                            <p>Internship Programs</p>
+                        </div>
+                        <div class="stat-box">
+                            <i class="fas fa-certificate"></i>
+                            <h4>5000+</h4>
+                            <p>Certified Interns</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Services Section -->
+    <section id="services" class="services">
+        <div class="container">
+            <div class="section-header">
+                <h2>Our Digital Services</h2>
+                <div class="underline"></div>
+                <p>Comprehensive solutions for businesses in the digital landscape</p>
+            </div>
+            <div class="services-grid">
+                <div class="service-card">
+                    <div class="service-icon">
+                        <i class="fas fa-globe"></i>
+                    </div>
+                    <h3>Web Development</h3>
+                    <p>Custom, responsive websites tailored to your business needs with modern technologies.</p>
+                </div>
+                <div class="service-card">
+                    <div class="service-icon">
+                        <i class="fas fa-mobile-alt"></i>
+                    </div>
+                    <h3>App Development</h3>
+                    <p>Native and cross-platform mobile applications with intuitive user experiences.</p>
+                </div>
+                <div class="service-card">
+                    <div class="service-icon">
+                        <i class="fas fa-search"></i>
+                    </div>
+                    <h3>SEO Consulting</h3>
+                    <p>Data-driven strategies to improve your online visibility and organic traffic.</p>
+                </div>
+                <div class="service-card">
+                    <div class="service-icon">
+                        <i class="fas fa-code"></i>
+                    </div>
+                    <h3>Software Development</h3>
+                    <p>Custom software solutions to streamline your business operations.</p>
+                </div>
+                <div class="service-card">
+                    <div class="service-icon">
+                        <i class="fas fa-shield-alt"></i>
+                    </div>
+                    <h3>Cybersecurity</h3>
+                    <p>Comprehensive security solutions to protect your digital assets.</p>
+                </div>
+                <div class="service-card">
+                    <div class="service-icon">
+                        <i class="fas fa-chart-line"></i>
+                    </div>
+                    <h3>Data Analytics</h3>
+                    <p>Transform your data into actionable insights for informed decision-making.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Internships Section -->
+    <section id="internships" class="internships">
+        <div class="container">
+            <div class="section-header">
+                <h2>Our Internship Programs</h2>
+                <div class="underline"></div>
+                <p>Gain hands-on experience and build your portfolio with our industry-relevant internships</p>
+            </div>
+            <div class="internship-tabs">
+                <div class="tab-buttons">
+                    <button class="tab-btn active" data-tab="web-dev">Web Development</button>
+                    <button class="tab-btn" data-tab="ml-ai">Machine Learning & AI</button>
+                    <button class="tab-btn" data-tab="data-science">Data Science</button>
+                    <button class="tab-btn" data-tab="cyber">Cybersecurity</button>
+                </div>
+                <div class="tab-content">
+                    <div class="tab-pane active" id="web-dev">
+                        <div class="internship-content">
+                            <div class="internship-image">
+                                <img src="Webdevelopment.jpg" alt="Web Development Internship">
+                            </div>
+                            <div class="internship-details">
+                                <h3>Web Development Internship</h3>
+                                <p>Learn modern web technologies and frameworks while building real-world projects. Get hands-on experience with HTML, CSS, JavaScript, React, and more.</p>
+                                <ul>
+                                    <li><i class="fas fa-check-circle"></i> 8-week program</li>
+                                    <li><i class="fas fa-check-circle"></i> Mentorship from industry experts</li>
+                                    <li><i class="fas fa-check-circle"></i> Portfolio-worthy projects</li>
+                                    <li><i class="fas fa-check-circle"></i> Verified certification</li>
+                                </ul>
+                                <a href="#contact" class="btn-primary">Apply Now</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="tab-pane" id="ml-ai">
+                        <div class="internship-content">
+                            <div class="internship-image">
+                                <img src="MachineLearning.jpg" alt="Machine Learning Internship">
+                            </div>
+                            <div class="internship-details">
+                                <h3>Machine Learning & AI Internship</h3>
+                                <p>Dive into the world of artificial intelligence and machine learning. Build models, analyze data, and develop AI-powered applications.</p>
+                                <ul>
+                                    <li><i class="fas fa-check-circle"></i> 10-week program</li>
+                                    <li><i class="fas fa-check-circle"></i> Hands-on projects with real datasets</li>
+                                    <li><i class="fas fa-check-circle"></i> Learn Python, TensorFlow, PyTorch</li>
+                                    <li><i class="fas fa-check-circle"></i> Verified certification</li>
+                                </ul>
+                                <a href="#contact" class="btn-primary">Apply Now</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="tab-pane" id="data-science">
+                        <div class="internship-content">
+                            <div class="internship-image">
+                                <img src="DataScience.jpg" alt="Data Science Internship">
+                            </div>
+                            <div class="internship-details">
+                                <h3>Data Science Internship</h3>
+                                <p>Learn to extract insights from complex data sets. Master data visualization, statistical analysis, and predictive modeling.</p>
+                                <ul>
+                                    <li><i class="fas fa-check-circle"></i> 12-week program</li>
+                                    <li><i class="fas fa-check-circle"></i> Work with industry data</li>
+                                    <li><i class="fas fa-check-circle"></i> Learn Python, R, SQL, Tableau</li>
+                                    <li><i class="fas fa-check-circle"></i> Verified certification</li>
+                                </ul>
+                                <a href="#contact" class="btn-primary">Apply Now</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="tab-pane" id="cyber">
+                        <div class="internship-content">
+                            <div class="internship-image">
+                                <img src="CyberSecurity.jpg" alt="Cybersecurity Internship">
+                            </div>
+                            <div class="internship-details">
+                                <h3>Cybersecurity Internship</h3>
+                                <p>Develop skills in protecting digital assets and systems. Learn about network security, ethical hacking, and security protocols.</p>
+                                <ul>
+                                    <li><i class="fas fa-check-circle"></i> 8-week program</li>
+                                    <li><i class="fas fa-check-circle"></i> Practical security exercises</li>
+                                    <li><i class="fas fa-check-circle"></i> Ethical hacking techniques</li>
+                                    <li><i class="fas fa-check-circle"></i> Verified certification</li>
+                                </ul>
+                                <a href="#contact" class="btn-primary">Apply Now</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonials Section -->
+    <section id="testimonials" class="testimonials">
+        <div class="container">
+            <div class="section-header">
+                <h2>What Our Interns Say</h2>
+                <div class="underline"></div>
+            </div>
+            <div class="testimonial-slider">
+                <div class="testimonial-container">
+                    <div class="testimonial active">
+                        <div class="testimonial-img">
+                            <img src="testimonial.jpg" alt="Testimonial 1">
+                        </div>
+                        <div class="testimonial-content">
+                            <p>"The web development internship at Prodigy Infotech was a game-changer for my career. The hands-on projects and mentorship helped me land my dream job at a tech startup."</p>
+                            <h4>Priya Sharma</h4>
+                            <p class="position">Web Developer at TechStart</p>
+                            <div class="rating">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="testimonial">
+                        <div class="testimonial-img">
+                            <img src="testimonial.jpg" alt="Testimonial 2"
+                        </div>
+                        <div class="testimonial-content">
+                            <p>"I joined the Data Science internship with basic knowledge and left with the confidence to tackle complex data problems. The curriculum was comprehensive and the mentors were always available to help."</p>
+                            <h4>Rahul Patel</h4>
+                            <p class="position">Data Analyst at AnalyticsHub</p>
+                            <div class="rating">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star-half-alt"></i>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="testimonial">
+                        <div class="testimonial-img">
+                            <img src="testimonial.jpg" alt="Testimonial 3">
+                        </div>
+                        <div class="testimonial-content">
+                            <p>"The Machine Learning internship exceeded my expectations. The projects were challenging but rewarding, and I gained practical experience that university courses couldn't provide."</p>
+                            <h4>Ananya Gupta</h4>
+                            <p class="position">ML Engineer at InnovateAI</p>
+                            <div class="rating">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="testimonial-controls">
+                    <button class="prev-btn"><i class="fas fa-chevron-left"></i></button>
+                    <div class="testimonial-dots">
+                        <span class="dot active"></span>
+                        <span class="dot"></span>
+                        <span class="dot"></span>
+                    </div>
+                    <button class="next-btn"><i class="fas fa-chevron-right"></i></button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="contact">
+        <div class="container">
+            <div class="section-header">
+                <h2>Get In Touch</h2>
+                <div class="underline"></div>
+                <p>Have questions about our services or internships? Reach out to us!</p>
+            </div>
+            <div class="contact-content">
+                <div class="contact-info">
+                    <div class="contact-item">
+                        <i class="fas fa-map-marker-alt"></i>
+                        <div>
+                            <h3>Our Location</h3>
+                            <p>Mumbai, Maharashtra, India</p>
+                        </div>
+                    </div>
+                    <div class="contact-item">
+                        <i class="fas fa-envelope"></i>
+                        <div>
+                            <h3>Email Us</h3>
+                            <p>info@prodigyinfotech.com</p>
+                        </div>
+                    </div>
+                    <div class="contact-item">
+                        <i class="fas fa-phone-alt"></i>
+                        <div>
+                            <h3>Call Us</h3>
+                            <p>+91 9876543210</p>
+                        </div>
+                    </div>
+                    <div class="social-links">
+                        <a href="#" class="social-icon"><i class="fab fa-linkedin-in"></i></a>
+                        <a href="#" class="social-icon"><i class="fab fa-twitter"></i></a>
+                        <a href="#" class="social-icon"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#" class="social-icon"><i class="fab fa-instagram"></i></a>
+                    </div>
+                </div>
+                <div class="contact-form">
+                    <form id="contactForm">
+                        <div class="form-group">
+                            <input type="text" id="name" placeholder="Your Name" required>
+                        </div>
+                        <div class="form-group">
+                            <input type="email" id="email" placeholder="Your Email" required>
+                        </div>
+                        <div class="form-group">
+                            <input type="text" id="subject" placeholder="Subject" required>
+                        </div>
+                        <div class="form-group">
+                            <textarea id="message" placeholder="Your Message" required></textarea>
+                        </div>
+                        <button type="submit" class="btn-primary">Send Message</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-logo">
+                    <h2>Prodigy<span>Infotech</span></h2>
+                    <p>Transforming education through innovation</p>
+                </div>
+                <div class="footer-links">
+                    <h3>Quick Links</h3>
+                    <ul>
+                        <li><a href="#home">Home</a></li>
+                        <li><a href="#about">About Us</a></li>
+                        <li><a href="#services">Services</a></li>
+                        <li><a href="#internships">Internships</a></li>
+                        <li><a href="#contact">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="footer-internships">
+                    <h3>Internships</h3>
+                    <ul>
+                        <li><a href="#internships">Web Development</a></li>
+                        <li><a href="#internships">Machine Learning</a></li>
+                        <li><a href="#internships">Data Science</a></li>
+                        <li><a href="#internships">Cybersecurity</a></li>
+                        <li><a href="#internships">Digital Marketing</a></li>
+                    </ul>
+                </div>
+                <div class="footer-newsletter">
+                    <h3>Subscribe to Our Newsletter</h3>
+                    <p>Stay updated with our latest news and offers</p>
+                    <form id="newsletterForm">
+                        <input type="email" placeholder="Your Email" required>
+                        <button type="submit" class="btn-primary">Subscribe</button>
+                    </form>
+                </div>
+            </div>
+<div class="footer-bottom">
+    <p>&copy; Developed by <a href="https://www.linkedin.com/in/kvsmanikanta" target="_blank">KVS Manikanta</a>, an intern at Prodigy Infotech. This is a DEMO webpage for internship. Shouldn’t be used for applying or submitting anything.</p>
+</div>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+
+document.addEventListener('DOMContentLoaded', function() {
+    // Mobile Navigation Toggle
+    const hamburger = document.querySelector('.hamburger');
+    const navLinks = document.querySelector('.nav-links');
+
+    hamburger.addEventListener('click', () => {
+        hamburger.classList.toggle('active');
+        navLinks.classList.toggle('active');
+    });
+
+    // Close mobile menu when clicking on a nav link
+    document.querySelectorAll('.nav-links a').forEach(link => {
+        link.addEventListener('click', () => {
+            hamburger.classList.remove('active');
+            navLinks.classList.remove('active');
+        });
+    });
+
+    // Sticky Header
+    window.addEventListener('scroll', () => {
+        const header = document.querySelector('header');
+        header.classList.toggle('sticky', window.scrollY > 0);
+    });
+
+    // Internship Tabs
+    const tabBtns = document.querySelectorAll('.tab-btn');
+    const tabPanes = document.querySelectorAll('.tab-pane');
+
+    tabBtns.forEach(btn => {
+        btn.addEventListener('click', () => {
+            // Remove active class from all buttons and panes
+            tabBtns.forEach(b => b.classList.remove('active'));
+            tabPanes.forEach(p => p.classList.remove('active'));
+            
+            // Add active class to clicked button and corresponding pane
+            btn.classList.add('active');
+            const tabId = btn.getAttribute('data-tab');
+            document.getElementById(tabId).classList.add('active');
+        });
+    });
+
+    // Testimonial Slider
+    const testimonials = document.querySelectorAll('.testimonial');
+    const dots = document.querySelectorAll('.dot');
+    const prevBtn = document.querySelector('.prev-btn');
+    const nextBtn = document.querySelector('.next-btn');
+    let currentIndex = 0;
+
+    function showTestimonial(index) {
+        testimonials.forEach(testimonial => testimonial.classList.remove('active'));
+        dots.forEach(dot => dot.classList.remove('active'));
+        
+        testimonials[index].classList.add('active');
+        dots[index].classList.add('active');
+        currentIndex = index;
+    }
+
+    // Initialize dots click event
+    dots.forEach((dot, index) => {
+        dot.addEventListener('click', () => {
+            showTestimonial(index);
+        });
+    });
+
+    // Previous button click
+    prevBtn.addEventListener('click', () => {
+        currentIndex = (currentIndex === 0) ? testimonials.length - 1 : currentIndex - 1;
+        showTestimonial(currentIndex);
+    });
+
+    // Next button click
+    nextBtn.addEventListener('click', () => {
+        currentIndex = (currentIndex === testimonials.length - 1) ? 0 : currentIndex + 1;
+        showTestimonial(currentIndex);
+    });
+
+    // Auto slide testimonials
+    setInterval(() => {
+        currentIndex = (currentIndex === testimonials.length - 1) ? 0 : currentIndex + 1;
+        showTestimonial(currentIndex);
+    }, 5000);
+
+    // Form Submission
+    const contactForm = document.getElementById('contactForm');
+    const newsletterForm = document.getElementById('newsletterForm');
+
+    if (contactForm) {
+        contactForm.addEventListener('submit', function(e) {
+            e.preventDefault();
+            
+            // Get form values
+            const name = document.getElementById('name').value;
+            const email = document.getElementById('email').value;
+            const subject = document.getElementById('subject').value;
+            const message = document.getElementById('message').value;
+            
+            // Here you would typically send the form data to a server
+            // For this example, we'll just show an alert
+            alert(`Thank you, ${name}! Your message has been sent. We'll get back to you soon.`);
+            
+            // Reset form
+            contactForm.reset();
+        });
+    }
+
+    if (newsletterForm) {
+        newsletterForm.addEventListener('submit', function(e) {
+            e.preventDefault();
+            
+            // Get email value
+            const email = newsletterForm.querySelector('input[type="email"]').value;
+            
+            // Here you would typically send the email to a server
+            // For this example, we'll just show an alert
+            alert(`Thank you for subscribing to our newsletter with ${email}!`);
+            
+            // Reset form
+            newsletterForm.reset();
+        });
+    }
+
+    // Smooth scrolling for anchor links
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+        anchor.addEventListener('click', function(e) {
+            e.preventDefault();
+            
+            const targetId = this.getAttribute('href');
+            if (targetId === '#') return;
+            
+            const targetElement = document.querySelector(targetId);
+            if (targetElement) {
+                window.scrollTo({
+                    top: targetElement.offsetTop - 80,
+                    behavior: 'smooth'
+                });
+            }
+        });
+    });
+
+    // Animation on scroll
+    const animateOnScroll = () => {
+        const elements = document.querySelectorAll('.service-card, .stat-box, .about-image, .about-text, .internship-content, .testimonial-slider');
+        
+        elements.forEach(element => {
+            const elementPosition = element.getBoundingClientRect().top;
+            const screenPosition = window.innerHeight / 1.3;
+            
+            if (elementPosition < screenPosition) {
+                element.style.opacity = '1';
+                element.style.transform = 'translateY(0)';
+            }
+        });
+    };
+
+    // Set initial styles for animation
+    document.querySelectorAll('.service-card, .stat-box, .about-image, .about-text, .internship-content, .testimonial-slider').forEach(element => {
+        element.style.opacity = '0';
+        element.style.transform = 'translateY(20px)';
+        element.style.transition = 'opacity 0.5s ease, transform 0.5s ease';
+    });
+
+    // Run animation on load and scroll
+    window.addEventListener('load', animateOnScroll);
+    window.addEventListener('scroll', animateOnScroll);
+});
+
+</script>
+</body>
+</html>
